@@ -60,3 +60,18 @@ func main() {
 }
 
 ```
+
+## Command-Line Application
+
+If you are using this from another language, a command-line application is also provided, `sundecoder`.  It is used like this:
+
+```
+./sundecoder -meta-read-key e6cbb56d350c25eda052b27f81b1c884 -mac-key 07f23a4c407485ea3122ff242f763e77 -mac-key-application 3042f562696b65646e61 -picc-data CBF5374BC4874E7AE53961E6533DDC5F -mac-code C4B7E3310EFC2FA3
+```
+
+The output will look like this:
+```
+ChipUID: 0421272aaa6180
+ReadCounter: 2
+Validated: true
+```
