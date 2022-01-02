@@ -36,7 +36,7 @@ func (meta *Meta) ReadCounterBytes() []byte {
 	return counterBytes[0:3]
 }
 
-func (meta *Meta) DecodeEncryptedFileData(data []byte) []byte {
+func (meta *Meta) DecryptFileData(data []byte) []byte {
 	if meta.Keyset.FileReadKey == KEY_NONE {
 		return data
 	}
