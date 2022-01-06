@@ -44,7 +44,9 @@ func (keyset *Keyset) DecodeEncryptedMetaStringWithAuthenticator(dataStr string,
 func (keyset *Keyset) DecodeEncryptedMetaString(dataStr string) (meta Meta) {
 	data, err := hex.DecodeString(dataStr)
 	if err != nil {
-		return Meta{}
+		return Meta{
+			Keyset: keyset,
+		}
 	}
 
 	return keyset.DecodeEncryptedMeta(data)
